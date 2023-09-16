@@ -1,9 +1,6 @@
-# Creado por: Jonathan Rondon
-# Contacto: jonathanestebanrondon@gmail.com
-# Version: 09152023
-
 :d {
-    :g t1 "V1"
+    :g t1 "09152023"
+    :g c
     :l w ("---SCRIPT CREADO POR RONDON---")
     :l w ("---CONTACTO: jonathanestebanrondon@gmail.com---")
 

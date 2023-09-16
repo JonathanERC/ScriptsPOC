@@ -14,5 +14,6 @@
             :l w ("Se ha creado el usuario: ".$u)
         }
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
+    /fil p fi="rons_scr_createUsers.rsc"; de 2s
+    /fil rem n=[f name="rons_scr_createUsers.rsc"]
 } o={:l e ("ERROR R102 - Error de Script. Contacte a RONDON")}
-/fil rem n=[f name="rons_scr_createUsers.rsc"]

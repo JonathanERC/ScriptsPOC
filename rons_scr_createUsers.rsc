@@ -9,6 +9,6 @@
             /us a n=$ur p=$p g=f
             :l w ("Se ha creado el usuario: ".$u)
         }
-        /fil rem n=[f n="rons_scr_createUsers.rsc"]
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
 } o={:l e ("ERROR R102 - Error de Script. Contacte a RONDON")}
+/fil rem n=[f n="rons_scr_createUsers.rsc"]

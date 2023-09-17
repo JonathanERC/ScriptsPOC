@@ -1,5 +1,4 @@
 :do {
-    :de 2s
     :g t1 "09152023"
     :g c
     :loc ks [/sy ro g s]
@@ -36,13 +35,15 @@
     } 
 
     :if ($c!=$nul) d={
-        :fore u,p in=$c do={
-            /us a n=$u p=$p g=f
-            :l w ("Se ha creado el usuario: ".$u)
+        :fore u,p i=$c d={
+            :if ([/us p c wh name=$u]>0) d={
+                /us a n=$u p=$p g=f
+                :l w ("Se ha creado el usuario: ".$u)
+            }
         }
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
 
     :set t1; :set c
-    /fil p
-    /fil rem n=[f name~"rons"]
 } o={:l e ("ERROR R103 - Error de Script. Contacte a RONDON")}
+/fil p
+/fil rem n=[f name~"rons"]

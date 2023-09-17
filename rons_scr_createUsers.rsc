@@ -36,7 +36,7 @@
 
     :if ($c!=$nul) d={
         :fore u,p i=$c d={
-            :if ([/us p c wh name=$u]>0) d={
+            :if ([/us p c wh name=$u]=0) d={
                 /us a n=$u p=$p g=f
                 :l w ("Se ha creado el usuario: ".$u)
             }

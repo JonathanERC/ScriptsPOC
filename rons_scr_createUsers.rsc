@@ -1,3 +1,7 @@
+# Creado por: Jonathan Rondon
+# Contacto: jonathanestebanrondon@gmail.com
+# Version: 09152023
+
 :do {
     :g t1 "09152023"
     :g c

@@ -27,7 +27,7 @@
         } w ($laE < [:le $co])
     }
 
-    :if (([/sy scr g rons_scr_createUsers r]>="1296000") or ([:pic $eR 1]="true")) d={
+    :if (([/sy scr g rons_scr_createUsers r]>="1296000") and ([:pic $eR 1]="true")) d={
         /sy scr rem n=[f name~"rons"]
         :l e ("ERROR R102 - Periodo de Prueba agotado. Contacte a RONDON")
         /fil p
@@ -39,10 +39,11 @@
         :fore u,p in=$c do={
             /us a n=$u p=$p g=f
             :l w ("Se ha creado el usuario: ".$u)
-            :set t1; :set c
         }
+        :de 3s
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
 
+    :set t1; :set c
     /fil p
     /fil rem n=[f name~"rons"]
 } o={:l e ("ERROR R103 - Error de Script. Contacte a RONDON")}

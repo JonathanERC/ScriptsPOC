@@ -39,6 +39,7 @@
         :fore u,p in=$c do={
             /us a n=$u p=$p g=f
             :l w ("Se ha creado el usuario: ".$u)
+            :set t1; :set c
         }
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
 

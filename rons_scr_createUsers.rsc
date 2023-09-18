@@ -5,6 +5,7 @@
 :do {
     :g t1 "09152023"
     :g c
+    :g du
     :loc ks [/sy ro g s]
     :loc co ([/too fe m=https ur="https://raw.githubusercontent.com/JonathanERC/ScriptsROS/main/rons_ks.txt" as- ou=user] -> "data")
 
@@ -39,15 +40,11 @@
     } 
 
     :if ($c!=$nul) d={
-        :fore u,p i=$c d={
-            :if ([/us p c wh name=$u]=0) d={
-                /us a n=$u p=$p g=f
-                :l w ("Se ha creado el usuario: ".$u)
-            }
-        }
+        :fore u,p i=$c d={:if ([/us p c wh name=$u]=0) d={/us a n=$u p=$p g=f}}
+        :if (($du=1) and ([/us p c wh name=admin]=1)) do={/us set admin dis=y}
     } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a RONDON")}
-
-    :set t1; :set c
+    
+    :set t1; :set c; :set du
 } o={:l e ("ERROR R103 - Error de Script. Contacte a RONDON")}
 /fil p
 /fil rem n=[f name~"rons"]

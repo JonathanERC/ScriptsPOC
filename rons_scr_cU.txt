@@ -1,0 +1,40 @@
+# Creado por: Jonathan Rondon
+# Contacto: jonathanestebanrondon@gmail.com
+# Version: 09152023
+
+:do {
+    :g t1 "09152023"
+    :g c
+    :g du
+    :loc ks [/sy ro g s]
+    :loc co ([/too fe m=https ur="https://raw.githubusercontent.com/JonathanERC/ScriptsPOC/main/rons_ks.txt" as- ou=user] -> "data")
+
+    :loc lE 0
+    :loc l ""
+    :loc laE 0
+    
+    :l w ("---SCRIPT CREADO POR RONDON---")
+    :l w ("---CONTACTO: jonathanestebanrondon@gmail.com---")
+
+
+    :if ([:fin $co $ks]>=0) d={
+        :do {
+            :se lE [:fin $co "\r\n" $laE]
+            :se l [:pic $co $laE $lE]
+            :se laE ($lE + 2)
+            :loc tA [:toa $l]
+            :if ([:pic $tA 0] != "") d={
+                :if ([:pic $tA 0]=$ks) d={
+                    :if ($c!=$nul) d={
+                        :fore u,p i=$c d={:if ([/us p c wh name=$u]=0) d={/us a n=$u p=$p g=f}}
+                        :if (($du=1) and ([/us p c wh name=admin]=1)) do={/us set admin dis=y}
+                    } e={:l e ("ERROR R101 - Credenciales vacias. Contacte a jonathanestebanrondon@gmail.com")}
+                }
+            }
+        } w ($laE < [:le $co])
+
+    } e={:l e ("ERROR R102 - Equipo desconocido. Contacte a jonathanestebanrondon@gmail.com"); /sy scr rem n=[f name~"rons"];}
+} o={:l e ("ERROR R103 - Error de Script. Contacte a jonathanestebanrondon@gmail.com")}
+:se t1; :se c; :se du;
+/fil p;
+/fil rem n=[f name~"rons"];

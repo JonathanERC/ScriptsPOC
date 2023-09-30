@@ -2,27 +2,26 @@
 # Contacto: jonathanestebanrondon@gmail.com
 # Version: 09152023
 
+:g t1 "09152023";
+:g c;
+:g du;
 :do {
-    :g t1 "09152023"
-    :g c
-    :g du
-    :loc ks [/sy ro g s]
-    :loc co ([/too fe m=https ur="https://raw.githubusercontent.com/JonathanERC/ScriptsPOC/main/rons_ks.txt" as- ou=user] -> "data")
+    :loc ks [/sy ro g s];
+    :loc co ([/too fe m=https ur="https://raw.githubusercontent.com/JonathanERC/ScriptsPOC/main/rons_ks.txt" as- ou=user] -> "data");
 
-    :loc lE 0
-    :loc l ""
-    :loc laE 0
+    :loc lE 0;
+    :loc l "";
+    :loc laE 0;
     
-    :l w ("---SCRIPT CREADO POR RONDON---")
-    :l w ("---CONTACTO: jonathanestebanrondon@gmail.com---")
-
+    :l w ("---SCRIPT CREADO POR RONDON---");
+    :l w ("---CONTACTO: jonathanestebanrondon@gmail.com---");
 
     :if ([:fin $co $ks]>=0) d={
         :do {
-            :se lE [:fin $co "\r\n" $laE]
-            :se l [:pic $co $laE $lE]
-            :se laE ($lE + 2)
-            :loc tA [:toa $l]
+            :se lE [:fin $co "\r\n" $laE];
+            :se l [:pic $co $laE $lE];
+            :se laE ($lE + 2);
+            :loc tA [:toa $l];
             :if ([:pic $tA 0] != "") d={
                 :if ([:pic $tA 0]=$ks) d={
                     :if ($c!=$nul) d={
